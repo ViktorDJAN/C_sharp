@@ -3,18 +3,22 @@
 //a = 2 b = 10 -> max = 10, min = 2
 //a = -9 b = -3 -> max = -3, min = -9
 
-Console.WriteLine("Введите первое число: ");
+Console.WriteLine("Enter first number: ");
 int numberA = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите второе число: ");
+Console.WriteLine("Enter second number: ");
 int numberB = Convert.ToInt32(Console.ReadLine());
 
 //Console.WriteLine(Math.Pow(number,2));
 if(numberA > numberB)
 {
-    Console.WriteLine("max = " + numberA);
+    Console.Write("max = " + numberA);
+    Console.Write(", ");
+    Console.WriteLine("min = " + numberB);
 }
 else
 {
-    Console.WriteLine("max = " + numberB);
+    Console.Write("max = " + numberB);
+    Console.Write(", ");
+    Console.WriteLine("min = " + numberA);
 }
