@@ -25,7 +25,7 @@ void PrintArray(int[] someAr)
     int begining = 0;
     while(begining < count)
     {
-        Console.WriteLine(someAr[begining]);
+        Console.Write($"{someAr[begining]} ");
         begining += 1;
     }
 }

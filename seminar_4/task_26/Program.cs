@@ -9,7 +9,7 @@ int Numsearch(int num)
 {
     int i = 0;
     int counter = 0;
-    for(i = num;i >0; i = i/ 10)
+    for(i = num ;i >0; i = i/ 10)
     {
         counter++;
     }

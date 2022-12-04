@@ -2,11 +2,41 @@
 // а выдает сумму чисел
 // 7 ->  28   or   4 --> 10
 
-Console.WriteLine("Enter a number");
-int numA = Convert.ToInt32(Console.ReadLine());
-int result = 0;
-for(int i = 0; i <= numA;i++)
+bool validate(int number)
 {
-    result = result + i;
+    if (number > 1)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
-Console.WriteLine(result);
+
+
+int coun (int A)
+{
+    int result = 0;
+    for(int i = 0; i <=  A;i++)
+    {
+        result = result + i;
+    }
+    return result;
+}
+
+int getNumber(string message)
+{
+    Console.WriteLine("ENTER NUMBER");
+    int numA = Convert.ToInt32(Console.ReadLine());
+    return numA;
+}
+// FUNCTION APPLICATION AND USAGE!!
+
+int number = getNumber("ENTER A NUMBER");
+bool isCorrect = validate(number);
+if (isCorrect == true)
+{
+    int sum = coun(number);
+    Console.WriteLine(sum);
+}
