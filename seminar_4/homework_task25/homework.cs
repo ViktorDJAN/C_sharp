@@ -11,8 +11,8 @@ int EnterNum(string text)
     return num;
 }
 
-int numA = EnterNum("ENTER A");
-int numB = EnterNum("ENTER B");
+// int numA = EnterNum("ENTER A");
+// int numB = EnterNum("ENTER B");
 
 // СОЗДАЕМ МЕТОД ОБРАБОТКИ
 int Workplace(int numA , int numB)
@@ -25,7 +25,9 @@ int Workplace(int numA , int numB)
     Console.WriteLine(res);
     return res;
 }
+int numA = EnterNum("ENTER A");
+int numB = EnterNum("ENTER B");
 int numm = Workplace(numA, numB); //    А ВОТ ТУТ Я НЕ ПОНЯЛ , ЗАПУСТИЛ И ВСЕ ЗАРАБОТАЛО
                                   //    ХОТЕЛ ДОБАВИТЬ   CONSOLE.WRITELINE  А ЧИСЛО УЖЕ ВЫВЕЛОСЬ САМО
-                                  
+
                                   //    НЕ МОГЛИ БЫ ЧУТЬ ЧУТЬ ПОЯСНИТЬ ЭТО МОМЕНТ  ??? 
