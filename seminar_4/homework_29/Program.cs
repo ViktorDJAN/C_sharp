@@ -2,14 +2,37 @@
 // из 8 элементов и выводит их на экран. Данные вводятся с консоли пользователем
 
 
-int [] array = new int[8];               //  ХОТЕЛ ОФОРМИТЬ ЭТОТ КОД В ВИДЕ МЕТОДА (ФУНКЦИИ)
-                                         // НО ЧУТЬ ЧУТЬ НЕ МОГУ СОБРАЗИТЬ КАК ЭТО СДЕЛАТЬ , ПОДСКАЖИТЕ ПОЖАЛУЙСТА,
-                                         // КАКИЕ СТРОКИ МНЕ НАДО СЮДА ДОБАВИТЬ !!
 
-for (int i = 0; i < array.Length; i++)
+int [] Getarray(int [] num)
 {
-    Console.WriteLine("Enter a number");
-    array[i] = Convert.ToInt32(Console.ReadLine());
-}
-Console.WriteLine($"[{string.Join(",", array)}]");
-    
+    int [] arr1 = new int[8];             
+
+    for (int i = 0; i < arr1.Length; i++)
+    {
+        Console.WriteLine("enter num");
+        arr1[i] = Convert.ToInt32(Console.ReadLine());
+        
+    }
+    Console.WriteLine($"[{string.Join(",", arr1)}]");
+    return arr1;
+}   
+int [] arr1 = new int[0];
+int [] a = Getarray(arr1);
+ 
+
+
+//Console.WriteLine($"[{string.Join(",", arr1)}]");
+// int Workplace(int num)
+// {   
+//     int sum = 0;
+//     int remainder = 0;
+//     for(int i = num; i>0; i=i/10)
+//     {
+//          remainder = i%10;
+//          sum += remainder;
+//     }
+//     Console.WriteLine(sum);
+//     return sum;
+// }
+// int num = EnterNum("ENTER NUM");
+// int numm = Workplace(num);
