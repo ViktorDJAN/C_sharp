@@ -5,7 +5,7 @@
 
 
 Console.WriteLine("Введите число");
-int num = Convert.ToInt32(Console.ReadLine());
+int desirednumber = Convert.ToInt32(Console.ReadLine());
 
 int [] Getarray(int size,int leftside,int rightside)
 {
@@ -18,26 +18,51 @@ int [] Getarray(int size,int leftside,int rightside)
     return array;
 }
 
+bool Search(int [] anyArrayNameCanBeHere,int desirednumber)
+{
+    bool res = false;
+    for(int i = 0; i < anyArrayNameCanBeHere.Length;i++)
+    {
+        if(anyArrayNameCanBeHere[i] == desirednumber)
+        {
+            res = true;
+        }
+ 
+    }
+    return res;
+}
 const int SIZE = 5;
 const int LEFTSIDE = 1;
 const int RIGHTSIDE = 9;
 
+
 int [] newArray = Getarray(SIZE,LEFTSIDE,RIGHTSIDE);
 Console.WriteLine(string.Join(",",newArray));
-
-
-string word = "";
-for(int i = 0; i < newArray.Length;i++)
+// ВТОРОЙ ВАРИАНТ РЕШЕНИЯ
+bool result = Search(newArray,desirednumber);
+if(result == true)
 {
-    
-    if(num == newArray[i])
-    {
-        word = "ДА";
-    }
-    else
-    {
-        word = "НЕТ";
-    }
-
+    Console.WriteLine("да");
 }
-Console.WriteLine($"Есть ли заданное число в массиве? {word}");
+else
+{
+    Console.WriteLine("нет");
+}
+
+// ПЕРВЫЙ ВАРИАНТ РЕШЕНИЯ 
+
+// string word = "";
+// for(int i = 0; i < newArray.Length;i++)
+// {
+    
+//     if(num == newArray[i])
+//     {
+//         word = "ДА";
+//     }
+//     else
+//     {
+//         word = "НЕТ";
+//     }
+
+// }
+// Console.WriteLine($"Есть ли заданное число в массиве? {word}");

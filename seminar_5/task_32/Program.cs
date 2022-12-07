@@ -15,7 +15,6 @@ int[] Getarray(int size, int leftRange, int rightRange)
 }
 int [] rotation(int [] somearray)
 {    
-   
     for(int i =0;i < somearray.Length; i+= 1)
     if(somearray[i]>0)
     {
