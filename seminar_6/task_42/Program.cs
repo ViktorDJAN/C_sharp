@@ -6,27 +6,28 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 int Method1(int number)
 {
-  int i = 0;
+  int count = 0;
   while(number >0)
   {
      number = number/2;
-     i+= 1;
+     count+= 1;
      
   }
-  return i;
+  return count;
 }
 
 int numb = Method1(number); // находим количество раз деления на 2.  при 8 будет 4   а при   5 ---- будет 3
-Console.WriteLine($"dlina kolichestva deleni = {numb}");
+Console.WriteLine($"количество делений = {numb}");
 int[] ost = new int [numb]; //создаем список длиной количества делений. numb.
 int o = ost.Length-1;
-Console.WriteLine($"dlina = {o}");
+Console.WriteLine($"Длина = {o}");
 while(number>0)
 {
     ost[o] = number%2;
-    Console.WriteLine($"resultat = {ost[o]}");
+    Console.WriteLine($"остаток = {ost[o]}");
     number = number/2;
-    Console.WriteLine($"resultat deleni number = {number}");
+    Console.WriteLine($"результат деления на 2 = {number}");
+    Console.WriteLine($"значение индекса = {o}");
     o = o-1;
 }
 Console.WriteLine(string.Join(",",ost));
