@@ -1,13 +1,15 @@
-﻿// Задача 57: Составить частотный словарь элементов двумерного массива. Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
-// 1, 2, 3
-// 4, 6, 1
-// 2, 1, 6
-// 1 встречается 3 раза
-// 2 встречается 2 раз
-// 3 встречается 1 раз
-// 4 встречается 1 раз
-// 6 встречается 2 раза
-// В нашей исходной матрице встречаются элементы от 0 до 9
+﻿// Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по возрастанию элементы каждой строки двумерного массива.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// В итоге получается вот такой массив:
+// 1 2 4 7
+// 2 3 5 9
+// 2 4 4 8
+
+
+
 
 int[,] getMatrix(int rowsCount,int columnsCount,int leftRange,int rightRange)
 {
@@ -41,24 +43,30 @@ void printMatrix(int[,] matr)
     }
 }
 
-int []  numberSearch(int[,] matr)
+void sort(int [,] arr)
 {
-    int[] res = new int [10];
-    for(int i=0;i<matr.GetLength(0);i++)
-    { 
-      for(int j=0;j<matr.GetLength(1);j++)
-      {
-        Console.WriteLine($"{matr[i,j]}");
-        
-        res[matr[i,j]] ++;
-        Console.WriteLine(string.Join(", ",res[matr[i,j]] ));
-      }
+    for(int k = 0;k< arr.GetLength(0);k++)
+    {
+         for(int l = 0;l< arr.GetLength(1)-1;l++)
+         {
+            for(int i = 0;i< arr.GetLength(0);i++)
+            {
+                for(int j = 0;j< arr.GetLength(1)-1;j++)
+                {
+                    if(arr[i,j] > arr[i,j+1])
+                    {
+                        int temp = arr[i,j];
+                        arr[i,j] = arr[i,j+1];
+                        arr[i,j+1] = temp;
+                    }
+                }
+            }
+         }
+
     }
-    return res;
-           
 }
- 
-    
+
+
 
 
 
@@ -70,7 +78,6 @@ int rightSide = GetNumber("Введите правую границу число
 int [,] newMatrix = getMatrix(rows,columns,leftSide,rightSide);
 printMatrix(newMatrix);
 Console.WriteLine();
-int [] somearr = numberSearch(newMatrix);
-Console.WriteLine(string.Join(", ", somearr));
-
+sort(newMatrix);
+printMatrix(newMatrix);
 
