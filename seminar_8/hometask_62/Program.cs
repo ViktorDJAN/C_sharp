@@ -16,7 +16,7 @@ int[,] getMatrix(int n)
         {
           matr[i,j] = current++;
         }
-         for(int k = 0;k<n-i;k++)
+         for(int k = 1;k<n-i;k++)
          {
              matr[k,n-i-1]=current++;
          }

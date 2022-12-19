@@ -46,12 +46,12 @@ int []  numberSearch(int[,] matr)
     int[] res = new int [10];
     for(int i=0;i<matr.GetLength(0);i++)
     { 
-      for(int j=0;j<matr.GetLength(1);j++)
+      for(int j=0;j<matr.GetLength(1);j++) 
       {
-        Console.WriteLine($"{matr[i,j]}");
         
+     
         res[matr[i,j]] ++;
-        Console.WriteLine(string.Join(", ",res[matr[i,j]] ));
+        
       }
     }
     return res;
@@ -72,5 +72,9 @@ printMatrix(newMatrix);
 Console.WriteLine();
 int [] somearr = numberSearch(newMatrix);
 Console.WriteLine(string.Join(", ", somearr));
+for(int i = 0; i < somearr.Length;i++)
+{
+    Console.WriteLine($"{i} == {somearr[i]}");
+}
 
 
